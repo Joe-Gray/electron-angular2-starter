@@ -25,7 +25,12 @@
 
       // other libraries
       'rxjs':                      'npm:rxjs',
-      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
+      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
+
+      'primeng':                    'npm:primeng',
+      'moment':                     'npm:moment/min',
+      'lodash':                     'npm:lodash',
+      'linq':                       'npm:linq'      
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -34,6 +39,21 @@
       },
       rxjs: {
         defaultExtension: 'js'
+      },
+      primeng: {
+          defaultExtension: 'js'
+      },
+      lodash: {
+          main: '/lodash.min.js',
+          defaultExtension: 'js'
+      },
+      moment: {
+          main: '/moment.min.js',
+          defaultExtension: 'js'
+      },
+      linq: {
+          main: '/linq.min.js',
+          defaultExtension: 'js'
       }
     }
   });
