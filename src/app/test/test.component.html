@@ -1,3 +1,26 @@
-<p>
-  test works!
-</p>
+<h2>Testing Ground</h2>
+<div class="container animated fadeIn">
+    <form class="form-horizontal" novalidate #form="ngForm">
+        <p-growl [value]="msgs"></p-growl>
+
+        <div class="form-group row">
+            <label class="control-label col-sm-2" for="name">Name</label>
+            <div class="col-sm-10">
+                <input id="name" name="name" #name="ngModel" required type="text" 
+                        class="form-control" placeholder="Name" [(ngModel)]="logoName" />
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                    Name is required
+                </div>
+            </div>
+        </div>
+
+        <p-fileUpload name="{{logoName}}" url="http://localhost:6756/api/logos/rawFile" (onUpload)="onUpload($event)" previewWidth="250"
+            (onBeforeSend)="onBeforeSend($event)" multiple="multiple" accept="image/*" maxFileSize="10000000">
+            <template pTemplate="content">
+                <ul *ngIf="uploadedFiles.length">
+                    <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+                </ul>
+            </template>
+        </p-fileUpload>
+    </form>
+</div>
