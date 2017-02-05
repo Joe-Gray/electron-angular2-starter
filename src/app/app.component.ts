@@ -19,9 +19,9 @@ export class AppComponent {
       },
       {
         label: 'Test',
-        icon: 'fa-male',
+        icon: 'fa-flask',
         items: [
-          { label: 'Test Page', icon: 'fa-search', routerLink: ['/test'] }
+          { label: 'Test Page', icon: 'fa-flask', routerLink: ['/test'] }
         ]
       }
     ];
