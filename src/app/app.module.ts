@@ -18,11 +18,13 @@ import { LocationService }          from './location/location.service';
 import { HomeComponent }            from './home/home.component';
 import { TestComponent }            from './test/test.component';
 import { LocationComponent }        from './location/location.component';
+import { LocationInputFormComponent }        from './location/input-form/location-input-form.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpModule, AppRoutingModule, NgbModule.forRoot(), MenubarModule, GrowlModule, FileUploadModule, DataListModule ],
-  declarations: [ AppComponent, HomeComponent, LocationComponent, TestComponent ],
-  providers:    [ HttpService, LocationService ],
-  bootstrap:    [ AppComponent ]
+  imports:          [ BrowserModule, FormsModule, HttpModule, AppRoutingModule, NgbModule.forRoot(), MenubarModule, GrowlModule, FileUploadModule, DataListModule ],
+  declarations:     [ AppComponent, HomeComponent, LocationComponent, LocationInputFormComponent, TestComponent ],
+  providers:        [ HttpService, LocationService, NgbActiveModal ],
+  entryComponents:  [ LocationInputFormComponent ],
+  bootstrap:        [ AppComponent ]
 })
 export class AppModule { }

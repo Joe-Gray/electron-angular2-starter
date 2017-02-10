@@ -1,6 +1,6 @@
 export class Location
 {
-	public locationID: number;
+	public locationId: number;
 	public locationDescription: string;
 	public addressLine1: string;
 	public city: string;
@@ -10,8 +10,8 @@ export class Location
 	public county: string;
 	public rowLoadedDateTime: Date;
 	public rowUpdatedDateTime: Date;
-	public eTLLoadedDateTime: Date;
-	public dealershipID: number;
+	public etlLoadedDateTime: Date;
+	public dealershipId: number;
 	public localRadius: number;
 	public regionalRadius: number;
 	public hasPickupService: boolean;
@@ -22,6 +22,6 @@ export class Location
 	public subsidyRadius: number;
 	public regionalDeliveryFee: number;
 	public assignBayNumber: boolean;
-	public parentLocationID: number;
+	public parentLocationId: number;
 	public locationCode: string;
 }

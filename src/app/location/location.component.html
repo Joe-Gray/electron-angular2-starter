@@ -1,7 +1,3 @@
-<div>
-  <p-dataList [value]="allLocations">
-    <template let-location pTemplate="item">
-      {{location.locationDescription}}
-    </template>
-  </p-dataList>
+<div *ngFor="let location of allLocations" (click)="showSelectedLocation(location)">
+  {{ location.locationDescription }}
 </div>
