@@ -18,6 +18,13 @@ export class AppComponent {
         routerLink: ['/home']
       },
       {
+        label: 'Location',
+        icon: 'fa-building',
+        items: [
+          { label: 'Locations', icon: 'fa-building-o', routerLink: ['/location'] }
+        ]
+      },
+      {
         label: 'Test',
         icon: 'fa-flask',
         items: [

@@ -30,7 +30,8 @@
       'primeng':                    'npm:primeng',
       'moment':                     'npm:moment/min',
       'lodash':                     'npm:lodash',
-      'linq':                       'npm:linq'      
+      'linq':                       'npm:linq',
+      '@ng-bootstrap/ng-bootstrap': 'npm:@ng-bootstrap/ng-bootstrap/bundles'   
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -53,6 +54,10 @@
       },
       linq: {
           main: '/linq.min.js',
+          defaultExtension: 'js'
+      },
+      '@ng-bootstrap/ng-bootstrap': {
+          main: '/ng-bootstrap.js',
           defaultExtension: 'js'
       }
     }

@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from '../home/home.component';
 import { TestComponent } from '../test/test.component';
+import { LocationComponent } from '../location/location.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home',  component: HomeComponent },
+  { path: 'location', component: LocationComponent },
   { path: 'test', component: TestComponent }
 ];
 
