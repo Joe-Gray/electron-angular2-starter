@@ -5,7 +5,8 @@ import { Location } from "./location";
 
 @Injectable()
 export class LocationService {
-    private webApiUrl = 'http://marketapidev.azurewebsites.net/api/locations';
+    //private webApiUrl = 'http://marketapidev.azurewebsites.net/api/locations';
+    private webApiUrl = 'http://localhost:5064/api/locations';
 
     constructor(private httpService: HttpService) { }
 

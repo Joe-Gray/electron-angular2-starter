@@ -30,6 +30,13 @@ export class AppComponent {
         items: [
           { label: 'Test Page', icon: 'fa-flask', routerLink: ['/test'] }
         ]
+      },
+      {
+        label: 'Account',
+        icon: 'fa-user',
+        items: [
+          { label: 'Account', icon: 'fa-user', routerLink: ['/account'] }
+        ]
       }
     ];
   }

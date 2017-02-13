@@ -20,9 +20,14 @@ import { TestComponent }            from './test/test.component';
 import { LocationComponent }        from './location/location.component';
 import { LocationInputFormComponent }        from './location/input-form/location-input-form.component';
 
+import { AccountComponent }        from './account/account.component';
+import { LoginComponent }          from './account/login/login.component';
+import { LogoutComponent }         from './account/logout/logout.component';
+
 @NgModule({
   imports:          [ BrowserModule, FormsModule, HttpModule, AppRoutingModule, NgbModule.forRoot(), MenubarModule, GrowlModule, FileUploadModule, DataListModule ],
-  declarations:     [ AppComponent, HomeComponent, LocationComponent, LocationInputFormComponent, TestComponent ],
+  declarations:     [ AppComponent, HomeComponent, LocationComponent, LocationInputFormComponent, TestComponent,
+                      AccountComponent, LoginComponent, LogoutComponent ],
   providers:        [ HttpService, LocationService, NgbActiveModal ],
   entryComponents:  [ LocationInputFormComponent ],
   bootstrap:        [ AppComponent ]
