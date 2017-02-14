@@ -79,7 +79,10 @@
     "@types/node": "^7.0.5",
     "@types/jasmine": "^2.5.41",
     "electron": "^1.6.0",
-    "electron-builder": "^13.3.2"
+    "electron-builder": "^13.3.2",
+    "qs": "6.3.0",
+    "axios": "0.15.3",
+    "electron-prebuilt-compile": "1.6.0"
   },
   "repository": {}
 }

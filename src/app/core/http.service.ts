@@ -14,6 +14,14 @@ export class HttpService {
             .catch(this.handleError);
     }
 
+    public postFormData(url: string, formData: string): Promise<any> {
+        var headers = new Headers({ "Content-Type": "application/x-www-form-urlencoded" });
+        return this.http.post(url, formData, { headers: headers })
+            .toPromise()
+            .then(response => response)
+            .catch(this.handleError);
+    }    
+
     private getStandardHeaders(): Headers {
         return new Headers(
             {

@@ -2,5 +2,8 @@
   "dependencies": {
     "linq": "registry:npm/linq#3.0.5+20160322032703",
     "lodash": "registry:npm/lodash#4.0.0+20161015015725"
+  },
+  "globalDependencies": {
+    "electron": "registry:dt/electron#1.4.8+20170202141310"
   }
 }
