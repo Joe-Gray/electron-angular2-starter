@@ -82,7 +82,8 @@
     "electron-builder": "^13.3.2",
     "qs": "6.3.0",
     "axios": "0.15.3",
-    "electron-prebuilt-compile": "1.6.0"
+    "electron-prebuilt-compile": "1.6.0",
+    "url": "0.11.0"
   },
   "repository": {}
 }
