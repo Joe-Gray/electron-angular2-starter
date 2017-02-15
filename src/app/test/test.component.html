@@ -1,4 +1,4 @@
-<!--<h2>Testing Ground</h2>
+<h2>Testing Ground</h2>
 <div class="container animated fadeIn">
     <form class="form-horizontal" novalidate #form="ngForm">
         <p-growl [value]="msgs"></p-growl>
@@ -14,13 +14,13 @@
             </div>
         </div>
 
-        <p-fileUpload name="{{logoName}}" url="http://localhost:6756/api/logos/rawFile" (onUpload)="onUpload($event)" previewWidth="250"
+<!--        <p-fileUpload name="{{logoName}}" url="http://localhost:6756/api/logos/rawFile" (onUpload)="onUpload($event)" previewWidth="250"
             (onBeforeSend)="onBeforeSend($event)" multiple="multiple" accept="image/*" maxFileSize="10000000">
             <template pTemplate="content">
                 <ul *ngIf="uploadedFiles.length">
                     <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
                 </ul>
             </template>
-        </p-fileUpload>
+        </p-fileUpload>-->
     </form>
-</div>-->
+</div>
