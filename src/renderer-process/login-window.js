@@ -5,6 +5,7 @@ const shell = remote.shell
 const parse = require('url')
 const qs = require('qs')
 const axios = require('axios')
+const lscache = require('lscache')
 
 const GOOGLE_AUTHORIZATION_URL = 'https://accounts.google.com/o/oauth2/v2/auth'
 const GOOGLE_TOKEN_URL = 'https://www.googleapis.com/oauth2/v4/token'
@@ -32,7 +33,7 @@ export async function googleSignIn() {
 
 export async function mySignInFunction(accessToken) {
   var response = await axios.get(`https://localhost:44377/api/accounts/getapptoken/${accessToken}`);
-  console.log(response);
+  localStorage.setItem('theAppToken', response.data);
 }
 
 export function signInWithPopup() {
@@ -78,6 +79,17 @@ export function signInWithPopup() {
     })
 
     authWindow.webContents.on('did-get-redirect-request', (event, oldUrl, newUrl) => {
+
+/*      if (oldUrl.includes('://carvana.okta.com/app/google' 
+          && !newUrl.includes('://carvana.okta.com/app/google/userhome'
+          && !oldUrl.includes('://carvana.okta.com/login/'
+          && !newUrl.includes('://carvana.okta.com/login/'))))){
+        console.log('got a redirect')
+        console.log(oldUrl)
+        console.log(newUrl)
+        authWindow.loadURL(`https://carvana.okta.com/login/login.htm?fromURI=${oldUrl}`);
+      }*/
+
       handleNavigation(newUrl)
     })
 

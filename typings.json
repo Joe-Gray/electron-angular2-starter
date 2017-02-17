@@ -4,6 +4,7 @@
     "lodash": "registry:npm/lodash#4.0.0+20161015015725"
   },
   "globalDependencies": {
-    "electron": "registry:dt/electron#1.4.8+20170202141310"
+    "electron": "registry:dt/electron#1.4.8+20170202141310",
+    "lscache": "registry:dt/lscache#1.0.7+20161128184045"
   }
 }

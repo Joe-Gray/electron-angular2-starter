@@ -5,7 +5,9 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class HttpService {
-    constructor(private http: Http) { }
+    constructor(
+        private http: Http
+        ) { }  
 
     public get<T>(url: string): Promise<T> {
         return this.http.get(url, { headers: this.getStandardHeaders() })
@@ -25,6 +27,7 @@ export class HttpService {
     private getStandardHeaders(): Headers {
         return new Headers(
             {
+                "Authorization": `Bearer ${localStorage.getItem('theAppToken')}`,
                 "Content-Type": "application/json",
                 "Accept": "application/json",
                 "CustomHeader": "customValue"

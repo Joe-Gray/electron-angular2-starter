@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../core/http.service';
 
 @Component({
   moduleId: module.id,
@@ -11,7 +12,7 @@ export class TestComponent implements OnInit {
   uploadedFiles: any[] = [];
   logoName: string;
 
-  constructor() { }
+  constructor(private httpService: HttpService) { }
 
   onBeforeSend(event: any) : void {
     event.xhr.setRequestHeader("CustomHeader", "CustomHeaderValue");
@@ -22,6 +23,7 @@ export class TestComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.httpService.get<any>('https://localhost:44377/api/locations/secureecho').then(response => this.logoName = response.message);
   }
 
 }
