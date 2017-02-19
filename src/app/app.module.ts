@@ -1,4 +1,4 @@
-import { NgModule }                 from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA }                 from '@angular/core';
 import { BrowserModule }            from '@angular/platform-browser';
 import { FormsModule }              from '@angular/forms';
 import { HttpModule }               from '@angular/http';
@@ -18,6 +18,7 @@ import { TestComponent }            from './test/test.component';
   imports:      [ BrowserModule, FormsModule, HttpModule, AppRoutingModule, MenubarModule, GrowlModule, FileUploadModule ],
   declarations: [ AppComponent, HomeComponent, TestComponent ],
   providers:    [ HttpService ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  schemas:      [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

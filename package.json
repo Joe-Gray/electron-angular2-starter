@@ -83,8 +83,7 @@
     "@types/jasmine": "^2.5.43",
     "electron": "^1.6.0",
     "electron-builder": "^13.9.0",
-    "pug": "2.0.0-beta11",
-    "jstransformer": "1.0.0"
+    "electron-prebuilt-compile": "1.6.0"
   },
   "repository": {}
 }
