@@ -30,7 +30,9 @@
       'primeng':                    'npm:primeng',
       'moment':                     'npm:moment/min',
       'lodash':                     'npm:lodash',
-      'linq':                       'npm:linq'      
+      'linq':                       'npm:linq',
+      '@angular/material':          'npm:@angular/material/bundles/material.umd.js',
+      'hammerjs':                   'npm:hammerjs'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -53,6 +55,10 @@
       },
       linq: {
           main: '/linq.min.js',
+          defaultExtension: 'js'
+      },
+      hammerjs: {
+          main: '/hammer.min.js',
           defaultExtension: 'js'
       }
     }

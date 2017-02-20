@@ -3,6 +3,9 @@ import { BrowserModule }            from '@angular/platform-browser';
 import { FormsModule }              from '@angular/forms';
 import { HttpModule }               from '@angular/http';
 
+import { MaterialModule }           from '@angular/material';
+import 'hammerjs';
+
 import { MenubarModule }            from 'primeng/primeng';
 import { GrowlModule }              from 'primeng/primeng';
 import { FileUploadModule }         from 'primeng/primeng';
@@ -15,7 +18,8 @@ import { HomeComponent }            from './home/home.component';
 import { TestComponent }            from './test/test.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpModule, AppRoutingModule, MenubarModule, GrowlModule, FileUploadModule ],
+  imports:      [ BrowserModule, FormsModule, HttpModule, AppRoutingModule, 
+                  MenubarModule, GrowlModule, FileUploadModule, MaterialModule ],
   declarations: [ AppComponent, HomeComponent, TestComponent ],
   providers:    [ HttpService ],
   bootstrap:    [ AppComponent ],
