@@ -3,6 +3,8 @@ import { BrowserModule }            from '@angular/platform-browser';
 import { FormsModule }              from '@angular/forms';
 import { HttpModule }               from '@angular/http';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { MaterialModule }           from '@angular/material';
 import 'hammerjs';
 
@@ -18,7 +20,7 @@ import { HomeComponent }            from './home/home.component';
 import { TestComponent }            from './test/test.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpModule, AppRoutingModule, 
+  imports:      [ BrowserModule, FormsModule, HttpModule, AppRoutingModule, NgbModule.forRoot(),
                   MenubarModule, GrowlModule, FileUploadModule, MaterialModule ],
   declarations: [ AppComponent, HomeComponent, TestComponent ],
   providers:    [ HttpService ],

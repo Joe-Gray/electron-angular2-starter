@@ -32,7 +32,8 @@
       'lodash':                     'npm:lodash',
       'linq':                       'npm:linq',
       '@angular/material':          'npm:@angular/material/bundles/material.umd.js',
-      'hammerjs':                   'npm:hammerjs'
+      'hammerjs':                   'npm:hammerjs',
+      '@ng-bootstrap/ng-bootstrap': 'npm:@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
